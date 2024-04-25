@@ -99,7 +99,7 @@ async def get_token_by_captcha(url: str) -> str | bool:
         query_params = dict(parse_qsl(parsed_url.query))  # 解析URL参数
         gt = query_params.get("c")  # pylint: disable=invalid-name
         challenge = query_params.get("l")
-        geetest_data = await get_validate(gt, challenge)
+        geetest_data = await get_validate(gt, challenge, url)
         params = {
             'k': '3dc42a135a8d45118034d1ab68213073',
             'locale': 'zh_CN',
