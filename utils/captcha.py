@@ -32,7 +32,7 @@ async def get_validate(gt: str, challenge: str, url: str) -> GeetestResult:  # p
             apiServer='api.geetest.com',
             challenge=challenge,userAgent=_conf.accounts[0].user_agent,
             url=url)
-            log.info("极验证返回:" + str(geetest_data))
+            log.info("user_agent:" + _conf.accounts[0].user_agent + "\n极验证返回:" + str(geetest_data))
             # 解析 code 字段为字典对象
             code_data = json.loads(geetest_data['code'])
             # 获取 geetest_challenge 和 geetest_validate 的值

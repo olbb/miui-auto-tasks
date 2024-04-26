@@ -36,6 +36,7 @@ async def main():
                         sign_obj = BaseSign(account)
                         daily_tasks = await sign_obj.check_daily_tasks()
                         sign_task_obj = sign_obj.AVAILABLE_SIGNS  # 签到任务对象合集
+                        log.info("sign_task_obj" + str(sign_task_obj) + "\ndaily_tasks:" + str(daily_tasks))
                         for task in daily_tasks:
                             log.info(f"开始执行{task.name}任务")
                             if task.showType:
