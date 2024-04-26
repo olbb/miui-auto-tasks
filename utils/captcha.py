@@ -26,7 +26,7 @@ async def get_validate(gt: str, challenge: str, url: str) -> GeetestResult:  # p
     """获取人机验证结果"""
     try:
         validate = None
-        if _conf.preference.geetest_url:
+        if _conf.preference.api_key:
             solver = TwoCaptcha(_conf.preference.api_key)
             geetest_data = solver.geetest(gt=gt,
             apiServer='api.geetest.com',
