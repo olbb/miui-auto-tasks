@@ -273,6 +273,7 @@ class BrowseVideoPost(BaseSign):
     浏览指定视频流超过5分钟
     """
     NAME = "浏览指定视频流超过5分钟"
+    NAME2 = "浏览指定页面的多个视频超过5分钟（中途退出重新计算时间）"
 
     PARAMS = {
         'ref': 'vipAccountShortcut',
@@ -349,6 +350,7 @@ class CarrotPull(BaseSign):
 BaseSign.AVAILABLE_SIGNS[CheckIn.NAME] = CheckIn
 BaseSign.AVAILABLE_SIGNS[BrowsePost.NAME] = BrowsePost
 BaseSign.AVAILABLE_SIGNS[BrowseVideoPost.NAME] = BrowseVideoPost
+BaseSign.AVAILABLE_SIGNS[BrowseVideoPost.NAME2] = BrowseVideoPost
 BaseSign.AVAILABLE_SIGNS[BrowseUserPage.NAME] = BrowseUserPage
 BaseSign.AVAILABLE_SIGNS[BrowseSpecialPage.NAME] = BrowseSpecialPage
 BaseSign.AVAILABLE_SIGNS[BoardFollow.NAME] = BoardFollow
