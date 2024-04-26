@@ -41,7 +41,7 @@ async def get_validate(gt: str, challenge: str, url: str) -> GeetestResult:  # p
             id = geetest_data['captchaId']
             return GeetestResult(challenge=challenge, validate=validate, captchaId=id)
         else:
-            return GeetestResult(challenge="", validate="")
+            return GeetestResult(challenge="", validate="", captchaId="")
     except Exception:  # pylint: disable=broad-exception-caught
         log.exception("获取人机验证结果异常")
-        return GeetestResult(challenge="", validate="")
+        return GeetestResult(challenge="", validate="", captchaId="")
